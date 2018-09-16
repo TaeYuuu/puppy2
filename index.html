@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>야바위를 해볼까여?</title>
+	<style>
+		#puppy{width: 700px; margin: auto; margin-left: 450px; margin-top: 30px; }
+		#cup1{width: 400px; position: absolute; left: 200px; margin: auto; margin-top: 350px; }
+		#cup11{width: 400px; position: absolute; left: 600px; margin: auto; margin-top: 350px; }		
+		#cup111{width: 400px; position: absolute; left: 1000px; margin: center; margin-top: 350px; }
+	</style>
+</head>
+<body>
+	<img src="puppy.png" id="puppy">
+	<img src="cup1.jpg" id="cup1">
+	<img src="cup1.jpg" id="cup11">
+	<img src="cup1.jpg" id="cup111">
+	<audio id="yay">
+		<source src="yay.mp3" type="audio/mpeg">
+	</audio>
+	<script type="text/javascript">
+		var toggle = "off";
+
+		cup1.onclick = function(){
+			if(toggle == "off"){
+				cup1.setAttribute("src","cup2.jpg");
+				toggle = "on";				
+			}else{
+				cup1.setAttribute("src","cup1.jpg");
+				toggle = "off";
+			}
+		}
+
+		cup11.onclick = function(){
+			if(toggle == "off"){
+				cup11.setAttribute("src","cup3.jpg");
+
+				toggle = "on";
+				yay.play();				
+			}else{
+				cup11.setAttribute("src","cup3.jpg");
+				toggle = "off";
+				yay.play();
+			}
+		}
+
+		cup111.onclick = function(){
+			if(toggle == "off"){
+				cup111.setAttribute("src","cup2.jpg");
+				toggle = "on";				
+			}else{
+				cup111.setAttribute("src","cup1.jpg");
+				toggle = "off";
+			}
+		}
+	</script>
+
+</body>
+</html>
